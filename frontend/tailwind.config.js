@@ -7,11 +7,11 @@
 export default {
   // 📂 Fichiers à scanner pour les classes Tailwind
   content: [
-    "./index.html",           // Scanne index.html
-    "./src/**/*.{vue,js,ts,jsx,tsx}",  // Scanne tous les fichiers Vue/TS
+    "./index.html",
+    "./src/**/*.{vue,js,ts,jsx,tsx}",
   ],
   
-  // 🌙 IMPORTANT: Active le mode dark avec la classe "dark" sur html
+  // 🌙 IMPORTANT: Active le mode dark avec la classe "dark" sur <html>
   // Cela signifie: Tailwind cherche la classe "dark" sur <html>
   darkMode: 'class',
   
@@ -38,9 +38,10 @@ export default {
           900: '#0c3d66',
         }
         // ✅ N'ajoute PAS slate ici, Tailwind l'a déjà par défaut!
+        // ✅ Cela évite les conflits avec @apply et les classes Tailwind
       },
       
-      // ✨ Transitions smooth
+      // ✨ Transitions smooth (optionnel)
       transitionDuration: {
         '200': '200ms',
       }

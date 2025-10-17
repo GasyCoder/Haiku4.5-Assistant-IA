@@ -4,6 +4,7 @@
    ✅ SANS AUCUN @apply (100% CSS pur)
    ================================ */
 
+/* 🎨 Importe les directives Tailwind */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -36,12 +37,14 @@
    🌙 TRANSITIONS GLOBALES
    ================================ */
 
+/* Applique une transition douce à TOUS les éléments */
 * {
   transition-property: background-color, color, border-color;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 200ms;
 }
 
+/* Transition spéciale pour html et body */
 html,
 body {
   transition: background-color 200ms ease, color 200ms ease;
@@ -49,42 +52,45 @@ body {
 
 /* ================================
    🎯 SCROLLBAR PERSONNALISÉE
+   Mode clair ET mode sombre
    ================================ */
 
+/* Largeur de la scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
 }
 
-/* Mode clair */
+/* Mode clair - Scrollbar */
 ::-webkit-scrollbar-track {
-  background-color: #f1f5f9;
+  background-color: #f1f5f9; /* slate-100 */
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #cbd5e1;
+  background-color: #cbd5e1; /* slate-300 */
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background-color: #94a3b8;
+  background-color: #94a3b8; /* slate-400 */
 }
 
-/* Mode sombre */
+/* Mode sombre - Scrollbar */
 html.dark ::-webkit-scrollbar-track {
-  background-color: #1e293b;
+  background-color: #1e293b; /* slate-800 */
 }
 
 html.dark ::-webkit-scrollbar-thumb {
-  background-color: #475569;
+  background-color: #475569; /* slate-600 */
   border-radius: 4px;
 }
 
 html.dark ::-webkit-scrollbar-thumb:hover {
-  background-color: #64748b;
+  background-color: #64748b; /* slate-500 */
 }
 
 /* ================================
    📱 ANIMATIONS TRANSITIONS VUE
+   Pour les transitions Vue.js
    ================================ */
 
 .fade-enter-active,
